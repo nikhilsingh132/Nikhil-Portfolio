@@ -13,7 +13,11 @@ const FONT_WEIGHTS = {
   },
 };
 
-const renderText = (text: string, className: string, baseWeight = 400) => {
+const renderText = (
+  text: string,
+  className: string,
+  baseWeight = 400
+): React.ReactNode => {
   return text.split("").map((char, index) => (
     <span
       key={index}
@@ -25,8 +29,11 @@ const renderText = (text: string, className: string, baseWeight = 400) => {
   ));
 };
 
-const setupHoverTextEffects = (container, type: string) => {
-  if (!container) return;
+const setupHoverTextEffects = (
+  container: HTMLElement,
+  type: string
+): (() => void) => {
+  if (!container) return () => {};
 
   const letters = container.querySelectorAll("span");
   const { min, max } = FONT_WEIGHTS[type];
