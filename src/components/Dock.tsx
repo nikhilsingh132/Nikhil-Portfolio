@@ -21,7 +21,6 @@ const Dock = (): React.ReactNode => {
     } else {
       openWindow(app.id);
     }
-    console.log(windows);
   };
 
   useGSAP(() => {
