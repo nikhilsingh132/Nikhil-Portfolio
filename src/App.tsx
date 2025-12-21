@@ -1,4 +1,4 @@
-import { Navbar, Welcome, Dock } from "#components/index";
+import { Navbar, Welcome, Dock, Home } from "#components/index";
 import gsap from "gsap";
 import { Draggable } from "gsap/Draggable";
 import {
@@ -18,6 +18,7 @@ const App = (): React.ReactNode => {
       <Navbar />
       <Welcome />
       <Dock />
+      <Home />
 
       <Terminal />
       <Safari />
