@@ -1,7 +1,7 @@
 import { Navbar, Welcome, Dock } from "#components/index";
 import gsap from "gsap";
 import { Draggable } from "gsap/Draggable";
-import { Terminal } from "./windows";
+import { Terminal, Safari, Resume } from "./windows";
 gsap.registerPlugin(Draggable);
 
 const App = (): React.ReactNode => {
@@ -12,6 +12,8 @@ const App = (): React.ReactNode => {
       <Dock />
 
       <Terminal />
+      <Safari />
+      <Resume />
     </main>
   );
 };
