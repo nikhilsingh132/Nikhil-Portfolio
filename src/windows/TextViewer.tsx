@@ -7,7 +7,12 @@ const TextViewer = (): React.ReactNode => {
   const data = windows?.txtfile?.data;
 
   if (!data) return null;
-  const { name, image, description, subtitle } = data;
+  const { name, image, description, subtitle } = data as {
+    name: string;
+    image: string;
+    description: string[];
+    subtitle: string;
+  };
   return (
     <>
       <div id="window-header">

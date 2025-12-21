@@ -7,7 +7,7 @@ const ImageViewer = (): React.ReactNode => {
   const data = windows?.imgfile?.data;
 
   if (!data) return null;
-  const { name, imageUrl } = data;
+  const { name, imageUrl } = data as { name: string; imageUrl: string };
   return (
     <>
       <div id="window-header">

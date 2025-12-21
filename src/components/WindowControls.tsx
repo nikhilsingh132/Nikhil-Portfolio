@@ -13,7 +13,7 @@ const WindowControls = ({
     | "txtfile"
     | "imgfile";
 }): React.ReactNode => {
-  const { closeWindow } = useWindowStore();
+  const { closeWindow, toggleMaximize } = useWindowStore();
 
   return (
     <div id="window-controls">
@@ -22,10 +22,7 @@ const WindowControls = ({
         className="minimize"
         //   onClick={() => minimizeWindow(target)}
       />
-      <div
-        className="maximize"
-        //   onClick={() => maximizeWindow(target)}
-      />
+      <div className="maximize" onClick={() => toggleMaximize(target)} />
     </div>
   );
 };
