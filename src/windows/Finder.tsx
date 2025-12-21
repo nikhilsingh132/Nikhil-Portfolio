@@ -5,16 +5,35 @@ import useFinderLocationStore from "#store/finderLocation";
 import { Search } from "lucide-react";
 import cx from "classnames";
 import useWindowStore from "#store/window";
+import { WINDOW_CONFIG } from "#constants/index";
 
 const Finder = (): React.ReactNode => {
   const { openWindow } = useWindowStore();
   const { activeLocation, setActiveLocation } = useFinderLocationStore();
 
-  const openItems = (items) => {
-    if (items.fileType === "pdf") {
+  const getWindowId = (
+    fileType: string,
+    kind: string
+  ): keyof typeof WINDOW_CONFIG | null => {
+    if (fileType === "pdf") {
+      return "resume";
+    }
+    if (kind === "file") {
+      if (fileType === "txt") return "txtfile";
+      if (fileType === "img") return "imgfile";
+    }
+    return null;
+  };
+
+  const openItems = (item) => {
+    if (item.fileType === "pdf") {
       return openWindow("resume");
-    } else if (items.kind === "folder") {
-      return setActiveLocation(items);
+    } else if (item.kind === "folder") {
+      return setActiveLocation(item);
+    }
+    const windowId = getWindowId(item.fileType, item.kind);
+    if (windowId) {
+      openWindow(windowId, item);
     }
   };
 
