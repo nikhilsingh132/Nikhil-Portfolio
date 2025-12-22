@@ -80,22 +80,33 @@ export const blogPosts = [
     date: "Nov 6, 2025",
     title:
       "React Promise Explained: What It Is, Why It Matters, and How to Use It",
-    image: "/images/blog1.png",
+    image:
+      "https://strapi.dhiwise.com/uploads/react_promise_OG_Image_7ed889a338.png",
     link: "https://docs.google.com/document/d/1NKe84MhR3rVeiiisi-55dfXHsY8614t_Ci3fMv51bAs/edit?usp=sharing",
   },
   {
     id: 2,
     date: "Oct 8, 2025",
     title: "Server sent events explained",
-    image: "/images/blog2.png",
+    image:
+      "https://media.licdn.com/dms/image/v2/D4D12AQHvWxhmOkG9vw/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1714328414570?e=2147483647&v=beta&t=ui_9UaXWBBRlcBCqqKhB4Pi6mpzs2lJ4jeJt_h-STEA",
     link: "https://drive.google.com/file/d/1gbvAAHZexbpziOGxZe1LHeRiWAM6lpN3/view?usp=sharing",
   },
   {
     id: 3,
     date: "Aug 15, 2025",
     title: "SSR vs CSR",
-    image: "/images/blog3.png",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTM6O8iVc-t3D9TzOI_CbrNW5t3bUZWOZblhA&s",
     link: "https://drive.google.com/file/d/1NbJEvydYDH5Z1sloiyuJbKgk7Uh-9szE/view?usp=sharing",
+  },
+  {
+    id: 4,
+    date: "Apr 26, 2025",
+    title: "Event bubbling and throttling explained",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYYbwkxv6oCoKAIPx957URMhhwlLceeqgLWg&s",
+    link: "https://docs.google.com/document/d/1Deh6mmETE0e7nciLW6Pe1eKpibWIpbfXxvIg6_0lnyk/edit?usp=sharing",
   },
 ];
 
