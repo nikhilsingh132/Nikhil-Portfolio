@@ -17,7 +17,7 @@ const Resume = (): React.ReactNode => {
         <WindowControls target="resume" />
         <h2>Resume.pdf</h2>
         <a
-          href="files/resume.pdf"
+          href="/files/resume.pdf"
           target="_blank"
           rel="noopener noreferrer"
           download
@@ -25,7 +25,7 @@ const Resume = (): React.ReactNode => {
           <Download className="icon" />
         </a>
       </div>
-      <Document file="files/resume.pdf">
+      <Document file="/files/resume.pdf">
         <Page pageNumber={1} renderTextLayer renderAnnotationLayer />
       </Document>
     </>
