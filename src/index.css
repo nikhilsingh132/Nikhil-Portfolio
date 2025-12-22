@@ -312,6 +312,14 @@ body {
         @apply font-bold text-sm text-center flex-1;
       }
     }
+    .resume-content {
+      @apply overflow-y-auto;
+      flex: 1;
+      min-height: 0;
+      max-height: calc(100% - 60px);
+      overflow-y: auto !important;
+      padding: 1rem;
+    }
   }
 
   #finder {

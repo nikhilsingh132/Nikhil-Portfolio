@@ -52,11 +52,35 @@ const WindowWrapper = (Component, windowId) => {
             height: originalPosition.height,
           };
         } else {
+          const windowWidth = 700;
+          const windowHeight = 600;
+
+          // Random offset: -150 to +150 pixels from center
+          const randomX = (Math.random() - 0.5) * 300;
+          const randomY = (Math.random() - 0.5) * 300;
+
+          const centerX = window.innerWidth / 2 - windowWidth / 2;
+          const centerY = window.innerHeight / 2 - windowHeight / 2;
+
+          let x = centerX + randomX;
+          let y = centerY + randomY;
+
+          // Keep window within viewport
+          const padding = 20;
+          x = Math.max(
+            padding,
+            Math.min(x, window.innerWidth - windowWidth - padding)
+          );
+          y = Math.max(
+            padding,
+            Math.min(y, window.innerHeight - windowHeight - padding)
+          );
+
           restorePosition = {
-            x: window.innerWidth / 2 - 400,
-            y: window.innerHeight / 2 - 300,
-            width: "800px",
-            height: "600px",
+            x,
+            y,
+            width: `${windowWidth}px`,
+            height: `${windowHeight}px`,
           };
         }
 

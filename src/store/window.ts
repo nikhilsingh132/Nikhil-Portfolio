@@ -36,9 +36,8 @@ const useWindowStore = create<WindowStore>()(
     openWindow: (windowId, data = null) => {
       set((state) => {
         state.windows[windowId].isOpen = true;
-        state.windows[windowId].zIndex = state.nextZIndex;
+        state.windows[windowId].zIndex = ++state.nextZIndex;
         state.windows[windowId].data = data;
-        state.nextZIndex++;
       });
     },
     closeWindow: (windowId) => {

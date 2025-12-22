@@ -25,9 +25,11 @@ const Resume = (): React.ReactNode => {
           <Download className="icon" />
         </a>
       </div>
-      <Document file="/files/resume.pdf">
-        <Page pageNumber={1} renderTextLayer renderAnnotationLayer />
-      </Document>
+      <div className="resume-content">
+        <Document file="/files/resume.pdf">
+          <Page pageNumber={1} renderTextLayer renderAnnotationLayer />
+        </Document>
+      </div>
     </>
   );
 };
