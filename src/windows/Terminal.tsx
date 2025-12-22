@@ -46,6 +46,9 @@ const Terminal = (): React.ReactNode => {
             Render time: 3ms
           </p>
         </div>
+        <p className="mt-5">
+          <span>@nikhil % ~ </span>
+        </p>
       </div>
     </>
   );
