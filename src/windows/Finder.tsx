@@ -30,6 +30,8 @@ const Finder = (): React.ReactNode => {
       return openWindow("resume");
     } else if (item.kind === "folder") {
       return setActiveLocation(item);
+    } else if (item.fileType === "url") {
+      return window.open(item.href, "_blank");
     }
     const windowId = getWindowId(item.fileType, item.kind);
     if (windowId) {
