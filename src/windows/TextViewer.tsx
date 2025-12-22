@@ -19,7 +19,7 @@ const TextViewer = (): React.ReactNode => {
         <WindowControls target="txtfile" />
         <h2>{name}</h2>
       </div>
-      <div className="p-5 space-y-6 bg-white">
+      <div className="p-5 space-y-6 bg-white overflow-auto max-h-[calc(100%-40px)]">
         {image ? (
           <div className="w-full">
             <img src={image} alt={name} className="w-full h-auto rounded" />
