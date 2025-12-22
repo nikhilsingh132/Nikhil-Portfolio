@@ -29,7 +29,7 @@ const App = (): React.ReactNode => {
 
     const interval = setInterval(() => {
       setCurrentWallpaper((prev) => (prev + 1) % wallpapers.length);
-    }, 60000); // 60 seconds
+    }, 10000); // 10 seconds
 
     return () => clearInterval(interval);
   }, []);
