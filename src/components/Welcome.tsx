@@ -107,7 +107,10 @@ const Welcome = (): React.ReactNode => {
       </h2>
 
       <div className="small-screen">
-        <p>This Portfolio is designed for tablet and desktop screens</p>
+        <p>
+          This Portfolio is designed for tablet and desktop screens (for phone
+          just change the settings to desktop view in the browser)
+        </p>
       </div>
     </section>
   );
