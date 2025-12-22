@@ -77,25 +77,25 @@ export const dockApps = [
 export const blogPosts = [
   {
     id: 1,
-    date: "Sep 2, 2025",
+    date: "Nov 6, 2025",
     title:
-      "TypeScript Explained: What It Is, Why It Matters, and How to Master It",
+      "React Promise Explained: What It Is, Why It Matters, and How to Use It",
     image: "/images/blog1.png",
-    link: "https://jsmastery.com/blog/typescript-explained-what-it-is-why-it-matters-and-how-to-master-it",
+    link: "https://docs.google.com/document/d/1NKe84MhR3rVeiiisi-55dfXHsY8614t_Ci3fMv51bAs/edit?usp=sharing",
   },
   {
     id: 2,
-    date: "Aug 28, 2025",
-    title: "The Ultimate Guide to Mastering Three.js for 3D Development",
+    date: "Oct 8, 2025",
+    title: "Server sent events explained",
     image: "/images/blog2.png",
-    link: "https://jsmastery.com/blog/the-ultimate-guide-to-mastering-three-js-for-3d-development",
+    link: "https://drive.google.com/file/d/1gbvAAHZexbpziOGxZe1LHeRiWAM6lpN3/view?usp=sharing",
   },
   {
     id: 3,
     date: "Aug 15, 2025",
-    title: "The Ultimate Guide to Mastering GSAP Animations",
+    title: "SSR vs CSR",
     image: "/images/blog3.png",
-    link: "https://jsmastery.com/blog/the-ultimate-guide-to-mastering-gsap-animations",
+    link: "https://drive.google.com/file/d/1NbJEvydYDH5Z1sloiyuJbKgk7Uh-9szE/view?usp=sharing",
   },
 ];
 
