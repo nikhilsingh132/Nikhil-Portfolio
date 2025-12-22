@@ -10,11 +10,36 @@ import {
   ImageViewer,
   Contact,
 } from "./windows";
+import { useEffect, useState } from "react";
 gsap.registerPlugin(Draggable);
 
+const wallpapers = [
+  "/wallpapers/wallpaper1.jpg",
+  "/wallpapers/wallpaper2.jpg",
+  "/wallpapers/wallpaper3.jpg",
+  "/wallpapers/wallpaper4.jpg",
+  "/wallpapers/wallpaper5.jpg",
+];
+
 const App = (): React.ReactNode => {
+  const [currentWallpaper, setCurrentWallpaper] = useState(0);
+
+  useEffect(() => {
+    if (wallpapers.length <= 1) return;
+
+    const interval = setInterval(() => {
+      setCurrentWallpaper((prev) => (prev + 1) % wallpapers.length);
+    }, 60000); // 60 seconds
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <main>
+      <div
+        id="wallpaper"
+        style={{ backgroundImage: `url(${wallpapers[currentWallpaper]})` }}
+      />
       <Navbar />
       <Welcome />
       <Dock />
