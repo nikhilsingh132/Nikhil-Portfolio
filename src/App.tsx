@@ -21,18 +21,42 @@ const wallpapers = [
   "/wallpapers/wallpaper5.jpg",
 ];
 
+// Preload all wallpapers on app load
+const preloadImages = (urls: string[]): Promise<void[]> => {
+  return Promise.all(
+    urls.map(
+      (url) =>
+        new Promise<void>((resolve) => {
+          const img = new Image();
+          img.onload = () => resolve();
+          img.onerror = () => resolve(); // Don't block on error
+          img.src = url;
+        })
+    )
+  );
+};
+
 const App = (): React.ReactNode => {
   const [currentWallpaper, setCurrentWallpaper] = useState(0);
+  const [imagesLoaded, setImagesLoaded] = useState(false);
 
+  // Preload all wallpapers on mount
   useEffect(() => {
-    if (wallpapers.length <= 1) return;
+    preloadImages(wallpapers).then(() => {
+      setImagesLoaded(true);
+    });
+  }, []);
+
+  // Start rotation only after images are loaded
+  useEffect(() => {
+    if (wallpapers.length <= 1 || !imagesLoaded) return;
 
     const interval = setInterval(() => {
       setCurrentWallpaper((prev) => (prev + 1) % wallpapers.length);
     }, 10000); // 10 seconds
 
     return () => clearInterval(interval);
-  }, []);
+  }, [imagesLoaded]);
 
   return (
     <main>
