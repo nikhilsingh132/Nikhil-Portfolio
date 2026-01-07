@@ -94,14 +94,6 @@ export const blogPosts = [
   },
   {
     id: 3,
-    date: "Aug 15, 2025",
-    title: "SSR vs CSR",
-    image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTM6O8iVc-t3D9TzOI_CbrNW5t3bUZWOZblhA&s",
-    link: "https://drive.google.com/file/d/1NbJEvydYDH5Z1sloiyuJbKgk7Uh-9szE/view?usp=sharing",
-  },
-  {
-    id: 4,
     date: "Apr 26, 2025",
     title: "Event bubbling and throttling explained",
     image:
